@@ -1,0 +1,348 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(179, 157, 219,0.4);
+    ;
+    font-family: 'Alata', sans-serif;
+}
+
+
+    /* header, imagenes y navegador en CELULARES O TABLETS*/
+
+.nav-bar {
+    background: linear-gradient(#9575CD  , #BB8FCE );
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.menu, .submenu{
+    list-style: none;
+}
+
+.menu{
+    background: linear-gradient(#9575CD  , #BB8FCE );
+    width: 100%;
+    margin-left: -100%;
+    transition: 0.3s ease-in-out;
+    z-index: 1010;
+    display: flex;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.menu__link:hover{
+    background-color: #BB8FCE ;
+}
+
+.submenu .menu__link:hover{
+    background-color: #9575CD ;
+}
+
+
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+    width: 80px;
+}
+
+.submenu .menu__link{
+    background-color: #BB8FCE  ;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+
+.mostrar{
+    margin-left: 0;
+}
+
+/* section logo*/
+.contenedor-logo{
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: -10;
+    margin-bottom: 10vh;
+}
+
+.img-central{
+    object-fit: cover;
+    width: 260px;
+    height: 250px;
+}
+
+
+ /* contenedor de ttitulo principal eventos y congresos*/
+
+ .contenedor-titulo{
+    text-align: center;
+    margin-top: 100px;
+    color: #7D3C98  ;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #7D3C98 ;
+    margin: auto auto;
+    margin-bottom: 10vh;
+}
+.contenedor-videos{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto auto;
+}
+iframe {
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid #7D3C98;
+}
+
+.contenedor-texto{
+    text-align: center;
+    padding: 10px;
+    margin-top: 5vh;
+}
+
+.contenedor-texto h1{
+    color: #7D3C98;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+.contenedor-texto p{
+    color: #566573;
+    font-size: 12px;
+} 
+
+
+.contendor-eventos{
+    text-align: center;
+    margin-top: 11vh;
+    margin-bottom: 7vh;
+}
+.contendor-eventos h1 {
+    color: #7D3C98;
+    font-size: 25px;
+}
+
+.contenedor-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto auto;
+    margin-bottom: 10vh;
+}
+.contenedor-imagenes img {
+    width: 100%;
+    object-fit: cover;
+    border: solid 3px #7D3C98;
+}
+
+
+
+
+/* footer*/
+    
+.contenedor-footer {
+    margin-top: 5vh;
+    background-color: #808B96 ;
+    padding: 15px;
+    width: 98%;
+    margin: auto auto;
+    height: 260px;
+}
+
+.content-1 {
+    position: relative;
+}
+
+.content-1 h4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #212F3D;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.content-1 p {
+    font-size: 10px;
+    color: white;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-2{
+    position: relative;
+}
+
+.content-2 h4 {
+    color: #212F3D;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.content-2 a {
+    text-decoration: none;
+    color: white;
+}
+.content-3{
+    margin-top: 8px;
+}
+.content-3 h4{
+    color: #212F3D;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.content-3 a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5pc;
+    
+}
+.titulo-final{
+    margin-top: 15px;
+    color: #212F3D;
+    text-align: center;
+}
+
+
+
+/* este responsive es para computadoras */
+@media screen and (min-width:1024px){
+
+    
+ 
+    .nav-bar{
+        display: none;
+
+
+    }
+
+ 
+    .menu {
+        margin-left: 0;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background: linear-gradient(#9575CD  , #BB8FCE );
+        
+    }
+
+    .menu__item{
+        margin: 20px;
+        
+    }
+
+    .menu__link{
+        font-size: 18px;
+    }
+
+    .contenedor-submenu{
+        position: relative;
+    }
+ 
+    .submenu{
+        position: absolute;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        margin-top: 18px;
+       
+    }
+    .submenu .menu__item{
+        margin: 0px;
+        
+    }
+
+    .submenu .menu__item .menu__link{
+        font-size: 15px;
+    }
+
+    .contenedor-submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* contenedor de ttitulo principal eventos y congresos*/
+
+    .contenedor-titulo{
+        text-align: center;
+        margin-top: 100px;
+        color: #7D3C98  ;
+        font-size: 30px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #7D3C98 ;
+        width: 33%;
+        margin: auto auto;
+        margin-bottom: 20vh;
+    }
+    .contenedor-videos{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 20px;
+        width: 80%;
+        margin: auto auto;
+    }
+    iframe {
+        width: 100%;
+    }
+
+
+    .contenedor-imagenes img:hover{
+        transition: 100ms;
+        transform: scale(1.1);
+    } 
+/* footer*/
+    
+footer {
+    background: #808B96 ;
+    width: 100%;
+    height: 320px;
+   
+}
+
+.content-1{
+    position: relative;
+}
+.content-1 h4{
+    top: -10%;
+    left: -100%;
+    font-size: 22px;
+}
+
+.content-1 p {
+    font-size: 16x;
+}
+
+.contenedor2-footer{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titulo-final{
+    margin-top: 70px;
+}
+}
